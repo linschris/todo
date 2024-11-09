@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo List</title>
+        <meta name="author" content="Christopher Linscott">
+        <meta name="description" content="A simple todo list">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <h1>Todo list</h1>
+        <ul>
+            {{range .Todos}}
+                <li>
+                    <label>
+                        {{.Item}}
+                        {{if .Completed}}
+                            <input type="checkbox" checked>
+                        {{else}}
+                            <input type="checkbox">
+                        {{end}}
+                    </label>
+                </li>
+            {{end}}
+        </ul>
+    </body>
+</html>

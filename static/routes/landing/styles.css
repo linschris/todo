@@ -1,0 +1,7 @@
+h1 {
+    color: red;
+}
+
+label:has(input:checked) {
+    color: red;
+}
